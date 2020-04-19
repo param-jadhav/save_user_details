@@ -1,0 +1,80 @@
+
+
+junit crud opertion
+===================
+
+https://www.youtube.com/watch?v=kXhYu939_5s&list=PLUTKeNksL7koiFxaYtH1nRDNe-IDbpnt9
+
+Junit & Mokito
+==============
+
+Stub:- simple class which will return some dummy data (if we use stub our code will increase and it will become heavy thats not good).
+	will use stub in very small scinarios. so as solution on stub will use mock.
+
+Mokito
+======
+
+Mock:-	Mocking is creating object that simulate the behavior of real object. 
+	Unlike the stubs, mocks can danamically created from code - at runtime.
+	Mocks offer more functionality than stubbing.
+	we can verify method call and lot other things. Mock is dynamic not hardcoded. If we call any method inside service that will return
+	empty response.
+
+Test case format:-
+=================
+		
+	Given:- Setup
+	When:-  actual method call
+	Then:-  asserts
+
+Annotations
+===========
+
+@RunWith(MockitotoUnitRunner.class) :	wherever we have @Mock then mockito will create object for it.
+@Mock:-	Automatically creates mock of define objct 
+@InjectMock:-	not req to pass mock obj to constructor it will auto inject
+
+All @Autowired dependancy need to mock in test
+
+Hamcrest Macher
+===============
+
+need to add hamcrest dependancy
+will simplify code readability. Asserts method become very eassy
+
+
+Power Mock
+==========
+	Mockito does not allow us to mock static and private methods.
+	Add dependancies Powermock-api-mackito and Powermock-module-junit4 
+Spy
+===
+
+	Override spcific funcationality of the class or gets all logic from the class or we can stub specific method 
+
+
+
+
+
+
+
+
+
+ user-action service urls
+ =========================
+ 
+ http://localhost:9091/getUsers
+ http://localhost:9091/getUserByAddress/Addr2
+ http://localhost:9091/save
+ {
+		"firstName": "prabhakar",
+        "lastName": "JADHAV",
+        "mobile": 9158,
+        "email": "prabhakar@gmail.com",
+        "address": "Addr5",
+        "userAction": "Postman test"
+       
+}
+
+ 
+			
