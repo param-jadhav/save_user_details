@@ -60,5 +60,21 @@ Spy
 
 
 
+ user-action service urls
+ =========================
+ 
+ http://localhost:9091/getUsers
+ http://localhost:9091/getUserByAddress/Addr2
+ http://localhost:9091/save
+ {
+		"firstName": "prabhakar",
+        "lastName": "JADHAV",
+        "mobile": 9158,
+        "email": "prabhakar@gmail.com",
+        "address": "Addr5",
+        "userAction": "Postman test"
+       
+}
+
  
 			
