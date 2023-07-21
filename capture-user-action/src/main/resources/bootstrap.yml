@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: SpringBootMockitoApplication
+  cloud:
+    config:
+      uri: http://localhost:8888 # The URL of your Config Server
+      refreshInterval: 1m
+
+# Common properties for all Actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # Expose all endpoints, can be a comma-separated list of endpoint IDs
+      health:
+        show-details: always # Display detailed health information
+
+# Configure security for Actuator endpoints (if required)
+#spring:
+#  security:
+#    user:
+ #     name: admin
+  #    password: adminpassword      

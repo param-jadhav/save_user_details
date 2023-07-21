@@ -1,4 +1,4 @@
-package com.myorg.spring.useraction.api.controller;
+package com.myorg.spring.useraction.api.aop;
 
 import java.util.List;
 
@@ -23,12 +23,12 @@ public class UserController {
 	public User saveUser(@RequestBody User user) {
 		return service.addUser(user);
 	}
-
+	//http://localhost:8081/getUsers
 	@GetMapping("/getUsers")
 	public List<User> findAllUsers() {
 		return service.getUsers();
 	}
-
+	//http://localhost:8081/getUserByAddress/Nanded
 	@GetMapping("/getUserByAddress/{address}")
 	public List<User> findUserByAddress(@PathVariable String address)
 			throws UserNotFoundException {
